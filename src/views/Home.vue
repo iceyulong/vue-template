@@ -37,6 +37,7 @@
 </template>
 
 <script>
+import _ from 'lodash'
 export default {
   name: 'Home',
   data () {
@@ -58,6 +59,9 @@ export default {
       this.$store.dispatch('getData')
     },
     handleCommand (val) {
+      var array = [1]
+      var other = _.concat(array, 2, [3], [[4]])
+      console.log(other)
       val === 'zh' ? this.$i18n.locale = 'zh' : this.$i18n.locale = 'en'
     },
     handleLan (val) {
