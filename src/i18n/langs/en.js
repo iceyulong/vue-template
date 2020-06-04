@@ -6,6 +6,7 @@ module.exports = {
     Captcha: 'Captcha',
     Language: 'Language',
     zh: 'Chinese',
-    en: 'English'
+    en: 'English',
+    placeholder: 'please select'
   }
 }

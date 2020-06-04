@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import store from './store'
 
-import { Button, Select, Option } from 'element-ui'
+import { Button, Select, Option, Dropdown, DropdownMenu, DropdownItem } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 /** 国际化 */
 import VueI18n from 'vue-i18n'
@@ -13,30 +13,37 @@ import enLocale from 'element-ui/lib/locale/lang/en'
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 import zh from './i18n/langs/zh'
 import en from './i18n/langs/en'
+import locale from 'element-ui/lib/locale'
 
 Vue.use(VueI18n)
 // 准备翻译的语言环境信息
 const messages = {
   zh: {
-    ...zh,
-    ...zhLocale
+    ...zhLocale,
+    ...zh
   },
   en: {
-    ...en,
-    ...enLocale
+    ...enLocale,
+    ...en
   }
 }
+
 // 通过选项创建 VueI18n 实例
 const i18n = new VueI18n({
   locale: 'en', // 设置地区
   messages
 })
+// locale.use(enLocale)
 
 Vue.use(Button)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Dropdown)
+Vue.use(DropdownMenu)
+Vue.use(DropdownItem)
 
 Vue.config.productionTip = false
+locale.i18n((key, value) => i18n.t(key, value))
 
 /* eslint-disable no-new */
 new Vue({

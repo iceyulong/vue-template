@@ -6,6 +6,7 @@ module.exports = {
     Captcha: '验证码',
     Language: '语言',
     zh: '中文',
-    en: '英文'
+    en: '英文',
+    placeholder: '请选择'
   }
 }
