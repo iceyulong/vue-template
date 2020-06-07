@@ -5,7 +5,9 @@ import App from './App'
 import router from './router'
 import store from './store'
 
-import { Button, Select, Input, Option, Dropdown, DropdownMenu, DropdownItem, Container, Aside, Main, Header, Footer } from 'element-ui'
+import { Button, Select, Input, Option, Dropdown, DropdownMenu,
+  Row, Col,
+  DropdownItem, Container, Aside, Main, Header, Footer } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 /** 国际化 */
 import VueI18n from 'vue-i18n'
@@ -50,6 +52,8 @@ Vue.use(Header)
 Vue.use(Footer)
 Vue.use(Main)
 Vue.use(Input)
+Vue.use(Row)
+Vue.use(Col)
 
 Vue.config.productionTip = false
 locale.i18n((key, value) => i18n.t(key, value))

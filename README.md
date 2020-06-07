@@ -168,3 +168,21 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
     $ npm install
     $ npm run dev
     ```
+
+# 使用nvm管理node版本
++ 控制面板卸载当前node
++ 安装nvm
+    > https://github.com/coreybutler/nvm-windows/releases 
+    > 安装解压缩版本 nvm-setup.zip
++ 安装完成后，打开cmd控制台
+    > 1. nvm 查看nvm是否安装成功
+    > 2. nvm list 查看是否有node版本（卸载后应是没有node版本）
+    > 3. nvm install 11.15.0 安装对应node版本（element-ui theme需要安装此版本）
+    > 4. nvm use 11.15.0 使用安装的node版本
+    > 5. nvm list 会选中当前使用的版本11.15.0
+    > 6. nvm其他命令
+    ```
+    nvm uninstall 11.15.0 卸载node版本
+    nvm version 显示nvm 版本
+    ```
+

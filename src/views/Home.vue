@@ -33,7 +33,15 @@
       <el-button @click="handleLan('en')">
         {{$t('message.en')}}
       </el-button> -->
-      <el-container >
+
+      <el-row type="flex" class="row-bg">
+        <el-col :xs="24"  :md="6" :sm="12" ><div class="grid-content bg-purple-dark"></div></el-col>
+        <el-col class="hidden-xs-only"  :md="6" :sm="12"><div class="grid-content bg-purple-light"></div></el-col>
+        <el-col :md="6" class="hidden-sm-and-down"><div class="grid-content bg-purple-dark"></div></el-col>
+        <el-col :md="6" class="hidden-sm-and-down"><div class="grid-content bg-purple-light"></div></el-col>
+      </el-row>
+
+      <!-- <el-container >
         <el-aside >
           <el-input type="primary" placeholder="请输入" v-model="num"></el-input>
         </el-aside>
@@ -42,7 +50,7 @@
           <el-main >Main</el-main>
           <el-footer >Footer</el-footer>
         </el-container>
-      </el-container>
+      </el-container> -->
   </div>
 </template>
 
@@ -81,7 +89,28 @@ export default {
   }
 }
 </script>
+<style scoped>
+@import url(./../../node_modules/element-ui/lib/theme-chalk/display.css);
+</style>
+
 <style>
+  .el-col {
+    border-radius: 4px;
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: blue;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+  }
+
   .el-header, .el-footer {
     background-color: #B3C0D1;
     color: #333;
