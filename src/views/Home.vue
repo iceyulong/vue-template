@@ -34,7 +34,9 @@
         {{$t('message.en')}}
       </el-button> -->
       <el-container >
-        <el-aside >Aside</el-aside>
+        <el-aside >
+          <el-input type="primary" placeholder="请输入" v-model="num"></el-input>
+        </el-aside>
         <el-container >
           <el-header >Header</el-header>
           <el-main >Main</el-main>
@@ -51,7 +53,8 @@ export default {
   data () {
     return {
       options: [],
-      value: ''
+      value: '',
+      num: ''
     }
   },
   computed: {
