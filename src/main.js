@@ -5,10 +5,6 @@ import App from './App'
 import router from './router'
 import store from './store'
 
-import { Button, Select, Input, Option, Dropdown, DropdownMenu,
-  Row, Col,
-  DropdownItem, Container, Aside, Main, Header, Footer } from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
 /** 国际化 */
 import VueI18n from 'vue-i18n'
 import enLocale from 'element-ui/lib/locale/lang/en'
@@ -16,9 +12,10 @@ import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 import zh from './i18n/langs/zh'
 import en from './i18n/langs/en'
 import locale from 'element-ui/lib/locale'
-
+import './elementPlugin'
 import '../theme/index.css'
 import 'normalize.css/normalize.css'
+import './assets/iconfont/iconfont.css'
 
 Vue.use(VueI18n)
 // 准备翻译的语言环境信息
@@ -39,21 +36,6 @@ const i18n = new VueI18n({
   messages
 })
 // locale.use(enLocale)
-
-Vue.use(Button)
-Vue.use(Select)
-Vue.use(Option)
-Vue.use(Dropdown)
-Vue.use(DropdownMenu)
-Vue.use(DropdownItem)
-Vue.use(Container)
-Vue.use(Aside)
-Vue.use(Header)
-Vue.use(Footer)
-Vue.use(Main)
-Vue.use(Input)
-Vue.use(Row)
-Vue.use(Col)
 
 Vue.config.productionTip = false
 locale.i18n((key, value) => i18n.t(key, value))
